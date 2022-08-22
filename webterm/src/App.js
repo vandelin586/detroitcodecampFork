@@ -1,29 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import '../node_modules/xterm/css/xterm.css'
 
-import { useEffect } from 'react';
-
-const useScript = url => {
-  useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = url;
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, [url]);
-};
-
-function App(props) {
-
+function App() {
   return (
     <div className="App">
-        <iframe id="terminal" src="/xterm.html"></iframe>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
